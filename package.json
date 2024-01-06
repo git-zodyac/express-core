@@ -1,6 +1,6 @@
 {
   "name": "@zodyac/express-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An express server for Zodyac framework.",
   "main": "index.js",
   "scripts": {
@@ -38,7 +38,6 @@
   },
   "dependencies": {
     "@zodyac/core": "^1.0.0",
-    "@zodyac/env": "^1.1.2",
     "@zodyac/express": "^1.1.4",
     "express": "^4.18.2",
     "zod": "^3.22.4"
