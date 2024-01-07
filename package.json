@@ -1,13 +1,19 @@
 {
-  "name": "@zodyac/express-module",
-  "version": "1.0.1",
+  "name": "@zodyac/express-core",
+  "version": "1.0.0",
   "description": "An express server for Zodyac framework.",
-  "main": "index.js",
   "scripts": {
     "build": "tsup",
     "test": "ts-node --esm ./src/test/main.ts"
   },
   "type": "module",
+  "main": "./dist/public-api.js",
+  "module": "./dist/public-api.mjs",
+  "types": "./dist/public-api.d.ts",
+  "private": false,
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "express",
     "zod",
@@ -25,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/git-zodyac/express-module"
+    "url": "https://github.com/git-zodyac/express-core"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
