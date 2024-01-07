@@ -1,6 +1,6 @@
-import { Router } from 'express';
-import { zRoutes } from './router.types.js';
-import { zGuardToMiddleware } from './router.checks.js';
+import { Router } from "express";
+import { zRoutes } from "./router.types.js";
+import { zGuardToMiddleware } from "./router.checks.js";
 
 export class zRouter {
   protected readonly _router = Router();
@@ -12,7 +12,7 @@ export class zRouter {
     for (const route of routes) {
       const guards = route.checks?.map(zGuardToMiddleware) ?? [];
 
-      if ('guards' in route) {
+      if ("guards" in route) {
         for (const guard of route.guards) {
           const guardInstance = new guard();
           guards.push(zGuardToMiddleware(guardInstance.canPass));
@@ -23,12 +23,12 @@ export class zRouter {
       //   this._router.use(route.path, ...route.middleware);
       // }
 
-      if ('module' in route) {
+      if ("module" in route) {
         this._router.use(route.path, ...guards, route.module.router);
       }
 
-      if ('method' in route) {
-        if (typeof route.handler === 'function') {
+      if ("method" in route) {
+        if (typeof route.handler === "function") {
           this._router[route.method](route.path, ...guards, route.handler);
           continue;
         }
@@ -36,7 +36,7 @@ export class zRouter {
         this._router[route.method](route.path, ...guards, ...route.handler);
         continue;
       }
-      if ('routes' in route) {
+      if ("routes" in route) {
         this._router.use(
           route.path,
           ...guards,

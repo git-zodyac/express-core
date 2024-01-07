@@ -1,11 +1,11 @@
-import { Request, Response, NextFunction } from 'express';
-import { zServiceShape } from '../service/service.types.js';
-import { AnyZodObject, z } from 'zod';
+import { Request, Response, NextFunction } from "express";
+import { zServiceShape } from "../service/service.types.js";
+import { AnyZodObject, z } from "zod";
 
 export type zGuard<Obj extends zServiceShape[string]> = Guard<
-  Obj extends { body: AnyZodObject } ? z.infer<Obj['body']> : unknown,
-  Obj extends { params: AnyZodObject } ? z.infer<Obj['params']> : unknown,
-  Obj extends { query: AnyZodObject } ? z.infer<Obj['query']> : unknown
+  Obj extends { body: AnyZodObject } ? z.infer<Obj["body"]> : unknown,
+  Obj extends { params: AnyZodObject } ? z.infer<Obj["params"]> : unknown,
+  Obj extends { query: AnyZodObject } ? z.infer<Obj["query"]> : unknown
 >;
 export type Guard<Body = unknown, Params = unknown, Query = unknown> = (
   req: Request<Params, unknown, Body, Query>,

@@ -1,19 +1,19 @@
-import { Request, Response, Handler } from 'express';
-import { zServiceShape } from '../service/service.types.js';
-import { zGuardConstructor } from './router.guards.js';
-import { Guard as Checkers } from './router.checks.js';
-import { zRouter } from './router.module.js';
-import { zAnyEnv } from '@zodyac/core';
+import { Request, Response, Handler } from "express";
+import { zServiceShape } from "../service/service.types.js";
+import { zGuardConstructor } from "./router.guards.js";
+import { Guard as Checkers } from "./router.checks.js";
+import { zRouter } from "./router.module.js";
+import { zAnyEnv } from "@zodyac/core";
 
 export type zRouteMethod =
-  | 'get'
-  | 'post'
-  | 'put'
-  | 'delete'
-  | 'patch'
-  | 'options'
-  | 'head'
-  | 'all';
+  | "get"
+  | "post"
+  | "put"
+  | "delete"
+  | "patch"
+  | "options"
+  | "head"
+  | "all";
 
 export type zEndpoint<
   Params = Record<string, string>,

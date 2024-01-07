@@ -1,7 +1,7 @@
-import express, { Application } from 'express';
-import { INJECTION_TOKEN, zAnyEnv, Module, TProvider } from '@zodyac/core';
-import { zRouter } from './router.module.js';
-import { zRoutes } from './router.types.js';
+import express, { Application } from "express";
+import { INJECTION_TOKEN, zAnyEnv, Module, TProvider } from "@zodyac/core";
+import { zRouter } from "./router.module.js";
+import { zRoutes } from "./router.types.js";
 
 export class zExpressApp extends Module {
   protected readonly _token = INJECTION_TOKEN.express;
