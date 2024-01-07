@@ -1,13 +1,19 @@
 {
   "name": "@zodyac/express-module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An express server for Zodyac framework.",
-  "main": "index.js",
   "scripts": {
     "build": "tsup",
     "test": "ts-node --esm ./src/test/main.ts"
   },
   "type": "module",
+  "main": "./dist/public-api.js",
+  "module": "./dist/public-api.mjs",
+  "types": "./dist/public-api.d.ts",
+  "private": false,
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "express",
     "zod",
