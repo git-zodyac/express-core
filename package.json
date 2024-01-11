@@ -1,6 +1,6 @@
 {
   "name": "@zodyac/express-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An express server for Zodyac framework.",
   "scripts": {
     "build": "tsup",
@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@zodyac/core": "^1.0.0",
-    "@zodyac/express": "^1.1.5",
+    "@zodyac/zod-express": "^1.1.5",
     "express": "^4.18.2",
     "zod": "^3.22.4"
   }

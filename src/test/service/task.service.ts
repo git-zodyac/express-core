@@ -1,7 +1,6 @@
-import { Service } from "../../public-api.js";
+import { Service, Check } from "../../public-api.js";
 import { TaskServiceSchema } from "./task.definition.js";
 import { TaskView } from "../view/task.view.js";
-import { Check } from "@zodyac/express";
 
 export class TaskService implements Service<typeof TaskServiceSchema> {
   _view = new TaskView();
