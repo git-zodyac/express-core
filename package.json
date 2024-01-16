@@ -1,6 +1,6 @@
 {
   "name": "@zodyac/express-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An express server for Zodyac framework.",
   "scripts": {
     "build": "tsup",
@@ -29,6 +29,7 @@
   ],
   "author": "bebrasmell",
   "license": "MIT",
+  "homepage": "https://zodyac.dev/docs/express",
   "repository": {
     "type": "git",
     "url": "https://github.com/git-zodyac/express-core"
