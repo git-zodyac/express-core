@@ -1,6 +1,6 @@
 {
   "name": "@zodyac/express-core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An express server for Zodyac framework.",
   "scripts": {
     "build": "tsup",
